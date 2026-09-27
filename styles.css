@@ -1,0 +1,104 @@
+body {
+  background-color: #ddd;
+  font-size: large;
+}
+
+button {
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: x-large;
+  margin-right: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+details {
+  background-color: white;
+  border: 1px solid black;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+h1 {
+  text-align: center;
+}
+
+span.die {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+summary {
+  font-weight: bold;
+}
+
+ul.criteria {
+  list-style-type: disc;
+}
+
+ul.criteria > li {
+  font-weight: bold;
+}
+
+ul.resolution {
+  list-style-type: circle;
+}
+
+ul.resolution * {
+  font-weight: normal;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.country-button-panel {
+  width: fit-content;
+  margin: auto;
+}
+
+.country-name {
+  margin-bottom: .25em;
+  width: 100%;
+}
+
+.country-name button {
+  width: 100%;
+}
+
+.country-ge {
+  background-color: #999999;
+  color: white;
+}
+
+.country-uk {
+  background-color: #a82e46;
+  color: white;
+}
+
+.country-fr {
+  background-color: #213193;
+  color: white;
+}
+
+.country-au {
+  background-color: #ebba00;
+  color: black;
+}
+
+.country-ru {
+  background-color: white;
+  color: black;
+}
+
+.country-ot {
+  background-color: #008400;
+  color: white;
+}
+
+.step {
+  margin-bottom: .25em;
+}

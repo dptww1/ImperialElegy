@@ -1,0 +1,13 @@
+[Imperial Elegy](https://boardgamegeek.com/boardgame/415308/imperial-elegy-the-road-to-the-great-war-1850-1920) is
+[VUCA Simulations](https://vucasims.com/)' game of imperial power politics, 1850-1920.  It's designed to be a six player
+game, but there are "bot" rules for when fewer players are available.
+
+BoardGameGeek has more-developed [bot rules](https://boardgamegeek.com/filepage/311127/victoria-bot-variant) which
+work pretty well but involve a lot of page flipping to work as you go between secondary actions, home card actions, and target
+assignments for diplomatic and great power alliance actions.
+
+I got tired of said page flipping, so I wrote this program so that a player can push a button for the bot's country, and all of
+the relevant actions are listed, with all randomized results pre-rolled.  If a human needs to override the app's result, the table
+consulted is shown along with the result for just that purpose.
+
+The app is available online at [[https://www.davetownsend.org/ImperialElegy/]].

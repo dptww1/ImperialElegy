@@ -129,5 +129,12 @@ const homeCardActions = [
     m('li', 'Otherwise',
       m('ul.resolution',
         m('li', tableLabel(homeCardTableOT)),
-        m('div', tableResolveText(homeCardTableOT, d6())))))
+        m('div', tableResolveText(homeCardTableOT, d6())))),
+    m('li', 'Modernization?',
+      m('ul.resolution',
+        m('li', 'Bots offer card on 1 if enemy, 1-3 if neutral, 1-5 if ally',
+          m('ul.resolution',
+            countryAbbrevs
+              .filter(abbrev => abbrev !== 'ot')
+              .map(abbrev => [ `${abbrev.toUpperCase()} => `, dieIcon(d6()), m('br') ]))))))
 ];

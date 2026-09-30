@@ -413,7 +413,7 @@ const domSurpriseWarMaybe = (idx, dr) => {
     return m('ul.criteria',
       m('li', 'Suprise War if:',
         m('ul.resolution',
-          idx === 0 ? m('li', 'Not GE before unification') : null,
+          idx === 0 ? m('li', 'GE unified') : null,
           m('li', 'Can use entire card to declare war'),
           m('li', 'Card >= 2 CPs'),
           m('li', 'Home card has already been played'),

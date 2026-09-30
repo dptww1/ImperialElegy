@@ -71,18 +71,30 @@ const homeCardActions = [
         m('li', 'Otherwise second option')))),
 
   // FR
-  () => m('ul.criteria',
-    m('li', tableLabel(homeCardTableFR)),
-    m('div', tableResolveText(homeCardTableFR, d6())),
-    m('li', 'Aux Armes, Citoyens'),
-    m('ul.resolution',
-      m('li', 'Use 1st option if can/would declare war and stability wouldn\'t go < 3'),
-      m('li', 'Otherwise if +1 marker in Italy box and able, declare Italian War of Unification instead of event'),
-      m('li', 'Otherwise, City of Light')),
-    m('li', 'City of Light'),
-    m('ul.resolution',
-      m('li', 'If < 3 CP guarantees City of Light point, don\'t spend more'),
-      m('li', 'Don\'t spend CPs for drm if not possible to reach 4 City of Light points by Turn 7'))),
+  () => {
+    const cityOfLightDrmDr = d6();
+    return m('ul.criteria',
+      m('li', tableLabel(homeCardTableFR)),
+      m('div', tableResolveText(homeCardTableFR, d6())),
+      m('li', 'Aux Armes, Citoyens',
+        m('ul.resolution',
+          m('li', 'Use 1st option if can/would declare war and stability wouldn\'t go < 3'),
+          m('li', 'Otherwise if +1 marker in Italy box and able, declare Italian War of Unification instead of event'),
+          m('li', 'Otherwise, City of Light'))),
+      m('li', 'City of Light',
+        m('ul.resolution',
+          m('li', '1-3 use that many CPs as DRM 4-6 no CPs spent as DRM'),
+          m('ul.resolution',
+            m('li', dieIcon(cityOfLightDrmDr), ` => use ${cityOfLightDrmDr < 4 ? `${cityOfLightDrmDr} CP${cityOfLightDrmDr > 1 ? 's' : ''} as DRM` : 'no drm'}`,
+              cityOfLightDrmDr < 4
+                ? m('ul.resolution',
+                    m('li', 'If < 3 CP guarantees City of Light point, don\'t spend more'),
+                    m('li', 'Don\'t spend CPs for drm if not possible to reach 4 City of Light points by Turn 7'))
+                : null)),
+          m('li', 'Roll <= Turn to gain City of Light point',
+            m('ul.resolution',
+              m('div', dieIcon(d6()), cityOfLightDrmDr < 4 ? ` - 0-${cityOfLightDrmDr} drm` : ' no drm'))))));
+  },
 
   // AU
   () => {
